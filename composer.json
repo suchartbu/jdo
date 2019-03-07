@@ -1,15 +1,15 @@
 {
-    "name": "buonzz/composer-library-template",
-    "description": "Boilerplate package for creating other packages.",
-    "keywords": ["template", "composer", "package"],
-    "license": "DBAD",
+    "name": "orr/jdo",
+    "description": "fetch data from database jdbc",
+    "keywords": ["jdbc", "AS400", "DB2"],
+    "license": "MIT",
     "authors": [
         {
-            "name": "Darwin Biler",
-            "email": "buonzz@gmail.com"
+            "name": "Suchart Bunhachirat",
+            "email": "suchartbu@gmail.com"
         }
     ],
-    "type": "project",
+    "type": "library",
     "require": {
 		"php": ">=7.1"
     },
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Buonzz\\Template\\": "src/"
+            "Orr\\Jdo\\": "src/"
         }
     }
 }
