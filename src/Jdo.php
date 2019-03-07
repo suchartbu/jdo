@@ -1,14 +1,6 @@
 <?php
 
-namespace Orr\Jdo;
-
-if (defined('BASEPATH')) {
-    /**
-     * require_once(APPPATH . 'models/Jdb_ttrpf.php');
-     */
-} else {
-    exit('No direct script access allowed');
-}
+namespace Orr;
 
 class JDOException extends \Exception {
     
@@ -20,8 +12,8 @@ class JDOException extends \Exception {
  */
 class Jdo {
 
-    private $ModelsPath = '/var/www/html/HIS/jar/models/';
-    private $LibrariesPath = '/var/www/html/HIS/jar/libraries/';
+    private $ModelsPath = __DIR__.'/jar/models/';
+    private $LibrariesPath = __DIR__.'/jar/libraries/';
     private $dbUrl = NULL;
     private $dbUser = NULL;
     private $dbPasswd = NULL;
