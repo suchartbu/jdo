@@ -12,7 +12,7 @@
  */
 require_once '../src/Jdo.php';
 
-use Orr\Jdo as Jdo;
+use Jdo\Jdo as Jdo;
 
 $sql = "SELECT * FROM jdbc_test WHERE id > 0";
 $user = "orrconn";

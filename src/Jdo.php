@@ -1,6 +1,6 @@
 <?php
 
-namespace Orr;
+namespace Jdo;
 
 class JDOException extends \Exception {
     
