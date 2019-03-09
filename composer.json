@@ -13,9 +13,6 @@
     "require": {
 		"php": ">=7.1"
     },
-    "require-dev": {
-		"phpunit/phpunit": "6.*"
-    },
     "autoload": {
         "psr-0": {
             "Orr\\Jdo\\": "src/"
