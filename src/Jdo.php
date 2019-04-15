@@ -39,14 +39,21 @@ class Jdo {
      */
     public function query($sql) {
         $this->execQuery($sql);
-        return ($this->isQueryOk()) ? $this->Json['data'] : FALSE;
+        return ($this->isExecOk()) ? $this->Json['data'] : FALSE;
+    }
+    
+    /**
+     * JDO::update
+     * @param string $sql
+     * @return array 
+     */
+    public function update($sql) {
+        $this->execUpdate($sql);
+        return ($this->isExecOk()) ? $this->Json['data'] : FALSE;
     }
 
-    public function getRowsArray() {
-        
-    }
 
-    public function isQueryOk() {
+    public function isExecOk() {
         return ($this->Json['execute'] === 'successed') ? TRUE : FALSE;
     }
 
@@ -69,5 +76,22 @@ class Jdo {
             
         }
     }
+    
+    private function execUpdate($sql) {
+        $output = NULL;
+        try {
+            $file_path = 'java -cp ' . $this->LibrariesPath . '*:' . $this->ModelsPath . 'jdb.jar execUpdate ' . '"' . $sql . '" ' . '"' . $this->dbUser . '" ' . '"' . $this->dbPasswd . '" ' . '"' . $this->dbUrl . '" ';
+            exec($file_path, $output);
+            $this->Json = json_decode($output[0], TRUE);
+            if ($this->Json['execute'] === 'failed') {
+                throw new JDOException($this->Json['info']);
+            }
+        } catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        } finally {
+            
+        }
+    }
+
 
 }
