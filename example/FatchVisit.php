@@ -12,7 +12,7 @@
  */
 require_once '../src/Jdo.php';
 
-use Jdo\Jdo as Jdo;
+//use Jdo\Jdo as Jdo;
 
 $keys = ['hn' => '460028','div_id'=>'DP1'];
 $cur_thdate = date("Ymd") + 5430000;
@@ -27,7 +27,7 @@ if (!is_null($keys['hn']) AND ! is_null($keys['div_id'])) {
 $user = "it";
 $passwd = "it";
 $url = "jdbc:as400://10.1.99.2/trhpfv5";
-$jdo = new Jdo($user, $passwd, $url);
+$jdo = new Orr\Jdo($user, $passwd, $url);
 $query = $jdo->query($sql);
 
 print_r($query);

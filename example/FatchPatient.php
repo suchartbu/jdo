@@ -12,7 +12,7 @@
  */
 require_once '../src/Jdo.php';
 
-use Jdo\Jdo as Jdo;
+//use Jdo\Jdo as Jdo;
 
 //$sql = "SELECT rmshnref AS hn, rmsname AS fname, rmssurnam AS lname FROM regmasv5pf WHERE rmshnref = 365656";
 //$sql = "SELECT * FROM regmasv5pf WHERE rmshnref = 365656";
@@ -25,7 +25,7 @@ $sql .= ' AND "REGMASV5PF"."RMSHNREF" = \'' . $hn . '\'';
 $user = "it";
 $passwd = "it";
 $url = "jdbc:as400://10.1.99.2/trhpfv5";
-$jdo = new Jdo($user, $passwd, $url);
+$jdo = new Orr\Jdo($user, $passwd, $url);
 $query = $jdo->query($sql);
 
 print_r($query);

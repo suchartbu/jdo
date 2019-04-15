@@ -12,7 +12,7 @@
  */
 require_once '../src/Jdo.php';
 
-use Jdo\Jdo as Jdo;
+//use Jdo\Jdo as Jdo;
 
 $keys = ['hn' => '197642'];
 /**
@@ -31,7 +31,7 @@ if (!is_null($keys['hn'])) {
 //$passwd = "it";
 //$url = "jdbc:as400://10.1.99.2/trhpfv5";
 //$jdo = new Jdo($user, $passwd, $url);
-$jdo = new Jdo('orrconn', 'xoylfk', 'jdbc:as400://10.1.99.2/trhpfv5');
+$jdo = new Orr\Jdo('orrconn', 'xoylfk', 'jdbc:as400://10.1.99.2/trhpfv5');
 $query = $jdo->query($sql);
 
 print_r($query);
