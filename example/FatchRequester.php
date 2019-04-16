@@ -15,7 +15,7 @@ require_once '../src/Jdo.php';
 //use Jdo\Jdo as Jdo;
 
 //$keys = ['id' => 'ท2525'];
-$keys = ['id' => '3edhat'];
+$keys = ['id' => '7959'];
 $sql = 'SELECT "TUSUSRNAM" "name", "TUSSTFNO" "staff_id", "TUSDRCOD" "doctor_id" FROM "TRHPFV5"."TABUSRV5PF" "TABUSRV5PF" WHERE "TUSACTFLG" = \' \' ';
 if (!is_null($keys['id'])) {
     $sql .= 'AND "TUSUSRCOD" = \'' . strtoupper($keys['id']) . '\'';

@@ -11,10 +11,11 @@
  */
 require_once '../src/Jdo.php';
 
-$sql = "INSERT INTO jdbc_test(id,name) VALUES('26','ข้อความนี้มาจากการทดสอบ updataDate.php')";
+$sql = "UPDATE jdbc_test SET name = 'ข้อความนี้มาจากการทดสอบแก้ไขข้อมูล updataDate.php' WHERE id = 26";
 $user = "orrconn";
 $passwd = "xoylfk";
 $url = "jdbc:as400://10.1.99.2/ttrpf";
 $jdo = new Orr\Jdo($user, $passwd, $url);
-$query = $jdo->update($sql);
-print_r($query);
+$keys = ['id' => "26"];
+$data = ['name' => "ข้อความนี้มาจากการทดสอบแก้ไขข้อมูล updataDate.php"];
+$jdo->update('jdbc_test', $data, $keys);
