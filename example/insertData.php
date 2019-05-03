@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Testing update data to AS400 DB2 with JDBC.
  * 
@@ -16,5 +17,14 @@ $passwd = "xoylfk";
 $url = "jdbc:as400://10.1.99.2/ttrpf";
 $jdo = new Orr\Jdo($user, $passwd, $url);
 $table = "jdbc_test";
-$data = ['id'=>"26",'name'=>"ข้อความนี้มาจากการทดสอบการเพิ่มข้อมูล insertDate.php"];
-$jdo->insert($table, $data);
+$data = ['id' => "27", 'name' => "ข้อความนี้มาจากการทดสอบการเพิ่มข้อมูล insertDate.php"];
+try {
+    print_r($jdo->insert($table, $data));
+} catch (Exception $exc) {
+    //echo $exc->getTraceAsString();
+    echo "Error";
+} finally {
+    echo "finally";
+}
+
+
