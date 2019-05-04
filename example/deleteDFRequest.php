@@ -14,7 +14,7 @@ $user = "orrconn";
 $passwd = "xoylfk";
 $url = "jdbc:as400://10.1.99.2/TRHPFV5";
 $jdo = new Orr\Jdo($user, $passwd, $url);
-$idx_ = ['document_id' => "DF00000001", 'document_thdate' => "25620503"];
+$idx_ = ['document_id' => "DF00000001", 'document_thdate' => "25620504"];
 $key_ipsrqov5pf = ['IRQDOCNO' => $idx_['document_id'] , 'IRQDOCDTE' => $idx_['document_thdate']];
 $jdo->delete("IPSRQOV5PF", $key_ipsrqov5pf);
 $key_ipsrqdv5pf = ['IRDDOCNO' => $idx_['document_id'] , 'IRDDOCDTE' => $idx_['document_thdate']];
