@@ -17,4 +17,4 @@ $user = "orrconn";
 $passwd = "xoylfk";
 $url = "jdbc:as400://10.1.99.2/ttrpf";
 $jdo = new Orr\Jdo($user, $passwd, $url);
-$jdo->delete("jdbc_test", ['id' => "26"]);
+$jdo->delete("jdbc_test", []);

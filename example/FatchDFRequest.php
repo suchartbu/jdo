@@ -14,7 +14,8 @@ require_once '../src/Jdo.php';
 
 //use Jdo\Jdo as Jdo;
 
-$sql = "SELECT * FROM IPSRQOV5PF WHERE IRQDOCNO = 'DF00000001'";
+//$sql = "SELECT * FROM IPSRQOV5PF WHERE IRQDOCNO = 'DF00000001'";
+$sql = "SELECT * FROM IPSRQOV5PF WHERE IRQDOCNO LIKE 'D%'";
 $user = "orrconn";
 $passwd = "xoylfk";
 $url = "jdbc:as400://10.1.99.2/TRHPFV5";

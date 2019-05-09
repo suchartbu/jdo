@@ -18,13 +18,11 @@ $url = "jdbc:as400://10.1.99.2/ttrpf";
 $jdo = new Orr\Jdo($user, $passwd, $url);
 $table = "jdbc_test";
 $data = ['id' => "27", 'name' => "ข้อความนี้มาจากการทดสอบการเพิ่มข้อมูล insertDate.php"];
+
 try {
-    print_r($jdo->insert($table, $data));
-} catch (Exception $exc) {
-    //echo $exc->getTraceAsString();
-    echo "Error";
-} finally {
-    echo "finally";
+    $jdo->insert($table, $data);
+} catch (Exception $ex) {
+    echo $ex->getMessage();
 }
 
 

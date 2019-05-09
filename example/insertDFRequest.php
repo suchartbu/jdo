@@ -15,8 +15,9 @@ $user = "orrconn";
 $passwd = "xoylfk";
 $url = "jdbc:as400://10.1.99.2/TRHPFV5";
 $jdo = new Orr\Jdo($user, $passwd, $url);
-
-$idx_ = ['document_id' => "DF00000001", 'document_thdate' => "25620503", 'document_time' => "0119", 'hn' => "460028",
+$cur_thdate = date("Ymd") + 5430000;
+$cur_time = date("Hi");
+$idx_ = ['document_id' => "DF00000001", 'document_thdate' => $cur_thdate, 'document_time' => $cur_time, 'hn' => "460028",
     'vn' => "0001", 'vn_seq' => "02", 'requester_id' => "ITIT", 'ips_id' => "21", 'doctor_id' => "1104", 'df_price' => "123456",
     'df_quantity' => "1", 'div_id' => "O10", 'contract_type' => "1", 'contract_code' => "", 'program_id' => "DFRequest"];
 $idx_['hims_thdate'] = substr($idx_['document_thdate'], 2);
