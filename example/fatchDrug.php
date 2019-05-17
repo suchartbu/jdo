@@ -18,12 +18,13 @@
 require_once '../src/Jdo.php';
 
 $keys = ['is_sync' => TRUE];
+//$keys = [];
 /**
  * ตรวจสอบค่า และสร้างเงื่อนไขการคัดข้อมูล
  */
-$sql = 'SELECT "PRDPRDNO" "id", "PRDPRDNAM" "trade_name", "PRDGNCNAM" "general_name" FROM "TRHPFV5"."PRDMASV5PF" "PRDMASV5PF" WHERE "PRDPRDTYP" = \'M\' ';
-if (!$keys['is_sync']) {
-    $sql .= 'AND  "PRDPRDNO" = \'\'';
+$sql = 'SELECT "PRDPRDNO" "id", "PRDPRDNAM" "trade_name", "PRDGNCNAM" "general_name", "PRDDOSFOM" "dosage_form" FROM "TRHPFV5"."PRDMASV5PF" "PRDMASV5PF" WHERE "PRDPRDTYP" = \'M\'';
+if (!isset($keys['is_sync'])) {
+    $sql .= ' AND  "PRDPRDNO" = \'\'';
 }
 /**
  * กำหนดค่าสำหรับการเชื่อมต่อฐานข้อมูล
