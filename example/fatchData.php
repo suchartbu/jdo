@@ -10,9 +10,7 @@
  * @author    suchart bunhachirat <suchartbu@gmail.com>
  * @copyright 2019 Suchart Bunhachirat
  */
-require_once '../src/Jdo.php';
-
-//use Jdo\Jdo as Jdo;
+require '../vendor/autoload.php';
 
 $sql = "SELECT * FROM jdbc_test WHERE id = 0";
 $user = "orrconn";

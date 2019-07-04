@@ -1,6 +1,6 @@
 {
-    "name": "jdo/jdo",
-    "description": "fetch data from database jdbc",
+    "name": "orr/composer-library",
+    "description": "PHP JDBC",
     "keywords": ["jdbc", "AS400", "DB2"],
     "license": "MIT",
     "authors": [
@@ -14,8 +14,8 @@
 		"php": ">=7.2"
     },
     "autoload": {
-        "psr-0": {
-            "Jdo": "src/"
+        "psr-4": {
+            "Orr\\": "src/"
         }
     }
 }
